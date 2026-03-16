@@ -2,6 +2,9 @@
 
 Posez des questions sur vos PDFs — 100% local avec Ollama, LangChain et ChromaDB.
 
+![demo_query](docs/ingest_pdf.gif)
+![demo_ingestion](docs/exemple_reponse_sources.gif)
+
 ## Stack
 - Ollama (llama3)
 - LangChain
@@ -15,28 +18,28 @@ Posez des questions sur vos PDFs — 100% local avec Ollama, LangChain et Chroma
 - [Ollama](https://ollama.com) installé
 
 ### 2. Installation
-\```bash
+```bash
 git clone https://github.com/salmazenn/rag-pdf-local.git
 cd rag-pdf-local
 python3 -m venv .venv
 source .venv/bin/activate
 pip install -r requirements.txt
 ollama pull llama3
-\```
+```
 
 ### 3. Ingérer un PDF
-\```bash
+```bash
 python src/rag.py ingest ~/Downloads/mon-fichier.pdf
-\```
+```
 
 ### 4. Lancer l'interface web
-\```bash
+```bash
 ollama serve &
 streamlit run src/app.py
-\```
+```
 Ouvre **http://localhost:8501** dans ton navigateur.
 
 ### 5. Ou utiliser le terminal
-\```bash
+```bash
 python src/rag.py chat
-\```
+```
